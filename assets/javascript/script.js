@@ -1,21 +1,5 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 $(function () {
   
@@ -50,7 +34,7 @@ $(function () {
   }
   
   function failedTask(){
-    save.text("An Error Ocurred and we were not able to save your task Local Storage")
+    save.text("An Error Ocurred and we were not able to save your task to Local Storage")
   }
   
   //Here we will update the state of each time block and the date at an interval of 1 minute
@@ -59,7 +43,7 @@ $(function () {
     state()
   }, (1000 * 60));
   
-  // TODO: Add a listener for click events on the save button. This code should
+  // Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
   // function? How can DOM traversal be used to get the "hour-x" id of the
@@ -76,9 +60,9 @@ $(function () {
     }
 
     else{
-      console.log(element.attr('id'))
-      console.log(element.children().eq(1).val())
-  
+      //console.log(element.attr('id'))
+      //console.log(element.children().eq(1).val())
+
       localStorage.setItem(element.attr('id'), JSON.stringify(project))
       saveTask()
     }
@@ -88,7 +72,7 @@ $(function () {
     var element = $(event.target);
     var textArea = (element.siblings(".description"));
     textArea.empty();
-    console.log(textArea.val())
+    //console.log(textArea.val())
     var attribute= element.parent().attr('id');
     localStorage.removeItem(attribute);
   }
@@ -96,7 +80,7 @@ $(function () {
   container.on("submit", ".time-block", buttonHandler)
   container.on("click", ".resetBtn", clearText)
   
-  // TODO: Add code to apply the past, present, or future class to each time
+  // Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
@@ -138,7 +122,7 @@ $(function () {
     }
   } 
   
-  // TODO: Add code to get any user input that was saved in localStorage and set
+  // Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
 
