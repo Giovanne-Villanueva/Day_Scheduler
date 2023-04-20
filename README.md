@@ -21,7 +21,7 @@ The image above shows what happens if you hit the save button in a text area. A 
 
 ![Error screen](./assets/images/Error.PNG)
 
-Here is a link to the webpage: 
+Here is a link to the webpage: https://giovanne-villanueva.github.io/Day_Scheduler/
 
 ## License
 
