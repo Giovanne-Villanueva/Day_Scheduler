@@ -18,17 +18,20 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
   <body>
-    <header class="p-5 mb-4 border-5 border-bottom border-dark text-center">
+    <header class="p-5 border-5 border-bottom border-dark text-center">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container-lg px-5">
+
+    <div id="save" class="col-12 text-center"></div>
+
+    <div id= "container" class="container-lg px-5">
       <!-- Use class for "past", "present", and "future" to apply styles to the
         time-block divs accordingly. The javascript will need to do this by
         adding/removing these classes on each div by comparing the hour in the
@@ -39,32 +42,119 @@
         code is implemented.
         -->
 
-      <!-- Example of a past time block. The "past" class adds a gray background color. -->
-      <div id="hour-9" class="row time-block past">
-        <div class="col-2 col-md-1 hour text-center py-3">9AM</div>
-        <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
+      <form id="hour-7" class="row time-block past">
+        <div class="col-2 col-md-1 hour text-center py-3">7AM</div>
+        <textarea class="col-7 col-md-9 description" rows="3"></textarea>
+        <button id="reset" type= "button" class="btn resetBtn col-2 col-md-1">Reset</button>
+        <button id="time-7" type = "submit" class="btn saveBtn col-2 col-md-1" aria-label="save">
+          <i class="fas fa-save" aria-hidden="true"></i>
+        </button> 
+      </form>
+  
+
+      <form id="hour-8" class="row time-block past">
+        <div class="col-2 col-md-1 hour text-center py-3">8AM</div>
+        <textarea class="col-7 col-md-9 description" rows="3"> </textarea>
+        <button id="reset" type= "button" class="btn resetBtn col-2 col-md-1">Reset</button>
         <button class="btn saveBtn col-2 col-md-1" aria-label="save">
           <i class="fas fa-save" aria-hidden="true"></i>
         </button>
-      </div>
+      </form>  
+
+      <!-- Example of a past time block. The "past" class adds a gray background color. -->
+      <form id="hour-9" class="row time-block past">
+        <div class="col-2 col-md-1 hour text-center py-3">9AM</div>
+        <textarea class="col-7 col-md-9 description" rows="3"> </textarea>
+        <button id="reset" type= "button" class="btn resetBtn col-2 col-md-1">Reset</button>
+        <button class="btn saveBtn col-2 col-md-1" aria-label="save">
+          <i class="fas fa-save" aria-hidden="true"></i>
+        </button>
+      </form>
 
       <!-- Example of a a present time block. The "present" class adds a red background color. -->
-      <div id="hour-10" class="row time-block present">
+      <form id="hour-10" class="row time-block past">
         <div class="col-2 col-md-1 hour text-center py-3">10AM</div>
-        <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
+        <textarea class="col-7 col-md-9 description" rows="3"> </textarea>
+        <button id="reset" type= "button" class="btn resetBtn col-2 col-md-1">Reset</button>
         <button class="btn saveBtn col-2 col-md-1" aria-label="save">
           <i class="fas fa-save" aria-hidden="true"></i>
         </button>
-      </div>
+      </form>
 
       <!-- Example of a future time block. The "future" class adds a green background color. -->
-      <div id="hour-11" class="row time-block future">
+      <form id="hour-11" class="row time-block past">
         <div class="col-2 col-md-1 hour text-center py-3">11AM</div>
-        <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
+        <textarea class="col-7 col-md-9 description" rows="3"> </textarea>
+        <button id="reset" type= "button" class="btn resetBtn col-2 col-md-1">Reset</button>
         <button class="btn saveBtn col-2 col-md-1" aria-label="save">
           <i class="fas fa-save" aria-hidden="true"></i>
         </button>
-      </div>
+      </form>
+
+      <form id="hour-12" class="row time-block past">
+        <div class="col-2 col-md-1 hour text-center py-3">12AM</div>
+        <textarea class="col-7 col-md-9 description" rows="3"> </textarea>
+        <button id="reset" type= "button" class="btn resetBtn col-2 col-md-1">Reset</button>
+        <button class="btn saveBtn col-2 col-md-1" aria-label="save">
+          <i class="fas fa-save" aria-hidden="true"></i>
+        </button>
+      </form>
+
+      <form id="hour-1" class="row time-block past">
+        <div class="col-2 col-md-1 hour text-center py-3">1PM</div>
+        <textarea class="col-7 col-md-9 description" rows="3"> </textarea>
+        <button id="reset" type= "button" class="btn resetBtn col-2 col-md-1">Reset</button>
+        <button class="btn saveBtn col-2 col-md-1" aria-label="save">
+          <i class="fas fa-save" aria-hidden="true"></i>
+        </button>
+      </form>
+
+      <form id="hour-2" class="row time-block past">
+        <div class="col-2 col-md-1 hour text-center py-3">2PM</div>
+        <textarea class="col-7 col-md-9 description" rows="3"> </textarea>
+        <button id="reset" type= "button" class="btn resetBtn col-2 col-md-1">Reset</button>
+        <button class="btn saveBtn col-2 col-md-1" aria-label="save">
+          <i class="fas fa-save" aria-hidden="true"></i>
+        </button>
+      </form>
+
+      <form id="hour-3" class="row time-block past">
+        <div class="col-2 col-md-1 hour text-center py-3">3PM</div>
+        <textarea class="col-7 col-md-9 description" rows="3"> </textarea>
+        <button id="reset" type= "button" class="btn resetBtn col-2 col-md-1">Reset</button>
+        <button class="btn saveBtn col-2 col-md-1" aria-label="save">
+          <i class="fas fa-save" aria-hidden="true"></i>
+        </button>
+      </form>
+
+      <form id="hour-4" class="row time-block past">
+        <div class="col-2 col-md-1 hour text-center py-3">4PM</div>
+        <textarea class="col-7 col-md-9 description" rows="3"> </textarea>
+        <button id="reset" type= "button" class="btn resetBtn col-2 col-md-1">Reset</button>
+        <button class="btn saveBtn col-2 col-md-1" aria-label="save">
+          <i class="fas fa-save" aria-hidden="true"></i>
+        </button>
+      </form>
+
+      <form id="hour-5" class="row time-block past">
+        <div class="col-2 col-md-1 hour text-center py-3">5PM</div>
+        <textarea class="col-7 col-md-9 description" rows="3"> </textarea>
+        <button id="reset" type= "button" class="btn resetBtn col-2 col-md-1">Reset</button>
+        <button class="btn saveBtn col-2 col-md-1" aria-label="save">
+          <i class="fas fa-save" aria-hidden="true"></i>
+        </button>
+      </form>
+
+      <form id="hour-6" class="row time-block past">
+        <div class="col-2 col-md-1 hour text-center py-3">6PM</div>
+        <textarea class="col-7 col-md-9 description" rows="3"> </textarea>
+        <button id="reset" type= "button" class="btn resetBtn col-2 col-md-1">Reset</button>
+        <button class="btn saveBtn col-2 col-md-1" aria-label="save">
+          <i class="fas fa-save" aria-hidden="true"></i>
+        </button>
+      </form>
+    </div>
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script
@@ -73,6 +163,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="script.js"></script>
+    <script src="./assets/javascript/script.js"></script>
   </body>
 </html>

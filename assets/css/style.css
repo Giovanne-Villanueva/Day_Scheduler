@@ -45,6 +45,25 @@ textarea {
   color: white;
 }
 
+#save{
+  background-color: #4E4B46;
+  margin-bottom: 2%;
+  color: white;
+}
+
+.resetBtn {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  background-color: red;
+  color: white;
+}
+
+.resetBtn i:hover {
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
