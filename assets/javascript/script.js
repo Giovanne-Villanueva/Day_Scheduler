@@ -72,7 +72,8 @@ $(function () {
     var element = $(event.target);
     var textArea = (element.siblings(".description"));
     textArea.replaceWith("<textarea class=\"col-7 col-md-9 description\" rows=\"3\"> </textarea>");
-    console.log(textArea.val())
+
+    //console.log(textArea.val())
     var attribute= element.parent().attr('id');
     localStorage.removeItem(attribute);
   }
