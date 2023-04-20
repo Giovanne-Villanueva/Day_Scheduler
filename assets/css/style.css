@@ -49,6 +49,7 @@ textarea {
   background-color: #4E4B46;
   margin-bottom: 2%;
   color: white;
+  transition: 1s;
 }
 
 .resetBtn {
